@@ -8,6 +8,8 @@ def index(request):
 def listaPosts(request):
     lista = Post.objects.all()
     return render(request, 'listaPosts.html',{'lista':lista})
+    
+
 
 def detalhePost(request):
     return render(request, 'detalhePost.html')
