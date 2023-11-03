@@ -1,0 +1,19 @@
+{% block conteudo %}
+<h3>Lista Post</h3>
+
+{% for post in lista %}
+<div>
+    <div><a href="{% url 'listaPosts' id=post.id %}">{{post.titulo}}</a></div>
+    <div>{{post.autor}}</div>
+    <div>
+        <a href="{% url 'listaPosts' id=post.id %}"><img src="{{post.imagem.url}}" alt="Imagem do post {{post.titulo}} escrito por {{post.autor}}"></a>
+    </div>
+    <div>
+        {{post.resumo}}
+    </div>
+</div>
+<hr>
+{% endfor %}
+
+
+{% endblock %}
