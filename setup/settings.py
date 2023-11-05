@@ -114,6 +114,13 @@ if DEBUG:
 else:
     STATIC_ROOT =  os.path.join(BASE_DIR,'static')
 
+# Outra maneira de tratar sem fazer uma condição, no entanto com a condição ainda acho mais seguro o a condição. 
+# STATIC_URL = 'static/'
+# STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
+# STATICFILES_DIRS = [
+#     os.path.join(BASE_DIR / 'static')
+# ]
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field

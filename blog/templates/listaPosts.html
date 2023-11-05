@@ -1,18 +1,23 @@
-{% block conteudo %}
+{% extends 'base.html' %}
+{% block content %}
 <h3>Lista Post</h3>
-{% for post in lista %}
-<div>
-    <div><a href="{% url 'listaPosts' id=post.id %}">{{post.titulo}}</a></div>
-    <div>{{post.autor}}</div>
-    <div>
-        <a href="{% url 'listaPosts' id=post.id %}"><img src="{{post.imagem.url}}" alt="Imagem do post {{post.titulo}} escrito por {{post.autor}}"></a>
-    </div>
-    <div>
-        {{post.resumo}}
-    </div>
-</div>
-<hr>
-{% endfor %}
 
+
+<div class="row my-5">
+    {% for post in lista %}
+    <div class="col-6 border">
+        <div>
+            <a href="{% url 'detalhePost' id=post.id %}" class="fs-2 nav-link">{{post.titulo}}</a>
+        </div>
+        <div><span>Autor: {{post.autor}}</span></div>
+        <div>
+            <a href="{% url 'detalhePost' id=post.id %}"><img src="{{post.imagem.url}}" alt="Imagem do post {{post.titulo}} escrito por {{post.autor}}" class="img-fluid"></a>
+        </div>
+        <div class="p-3">
+            <span class="p-2">{{post.resumo}}</span>
+        </div>
+    </div>
+    {% endfor %}
+</div>
 
 {% endblock %}

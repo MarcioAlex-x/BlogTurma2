@@ -9,7 +9,6 @@ def listaPosts(request):
     lista = Post.objects.all()
     return render(request, 'listaPosts.html',{'lista':lista})
     
-
-
-def detalhePost(request):
-    return render(request, 'detalhePost.html')
+def detalhePost(request, id):
+    detalhe = Post.objects.get(id=id)
+    return render(request, 'detalhePost.html', {'detalhe':detalhe})
