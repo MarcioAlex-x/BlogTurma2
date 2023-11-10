@@ -11,4 +11,4 @@ def listaPosts(request):
     
 def detalhePost(request, id):
     detalhe = Post.objects.get(id=id)
-    return render(request, 'detalhePost.html', {'detalhe':detalhe})
+    return render(request, 'detalhePost.html',{'detalhe':detalhe})
