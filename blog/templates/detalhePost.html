@@ -1,7 +1,23 @@
 {% extends 'base.html' %}
 {% block conteudo %}
 
-<h3>Detalhe Post</h3>
+<h3 class="display-3">{{detalhe.titulo}}</h3>
+<div class="row">
+    <div class="col-6">
+        <img src="{{detalhe.imagem.url}}" alt="imagem de {{detalhe.titulo}}">
+    </div>
+
+    <div class="col-6 d-flex my-4">
+        <div class="barra"></div>
+        <div>
+            <h4 class="text-center">{{ detalhe.autor }}</h4>
+            <p class="p-3">{{ detalhe.conteudo }}</p>
+        </div>
+
+
+
+    </div>
+</div>
 
 
 

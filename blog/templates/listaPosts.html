@@ -7,13 +7,16 @@
     {% for post in lista %}
     <div class="col-6 border">
         <div>
-            <a href="{% url 'detalhePost' id=post.id %}" class="fs-2 nav-link">{{post.titulo}}</a>
+            <a href="{% url 'detalhePost' id=post.id %}" class="fs-5 nav-link text-center my-4">{{post.titulo}}</a>
+            <hr>
         </div>
-        <div><span>Autor: {{post.autor}}</span></div>
-        <div>
-            <a href="{% url 'detalhePost' id=post.id %}"><img src="{{post.imagem.url}}" alt="Imagem do post {{post.titulo}} escrito por {{post.autor}}" class="img-fluid"></a>
+        <div><p class="text-end">Autor: {{post.autor}}</p></div>
+        <div class="imagemPostLista d-flex align-items-center">
+            <a href="{% url 'detalhePost' id=post.id %}"><img src="{{post.imagem.url}}" alt="Imagem do post {{post.titulo}} escrito por {{post.autor}}" class="w-100 img-fluid"></a>
+            
         </div>
-        <div class="p-3">
+        <div class="p-5">
+            <hr>
             <span class="p-2">{{post.resumo}}</span>
         </div>
     </div>

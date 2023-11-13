@@ -1,0 +1,28 @@
+.imgLogo{
+    width: 40px;
+}
+.banner{
+    width: 100%;
+}
+.barra{
+    height: 100%;
+    width: 1px;
+    background-color: black;
+}
+.imagemPostLista{
+    height: 500px;
+}
+/* .imagemImagemPostLista{
+    width: 100%;
+} */
+
+.formLogin{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    padding: 32px;
+}
+.formLogin input{
+    width: 100%;
+}
